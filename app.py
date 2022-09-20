@@ -12,7 +12,7 @@ class GBN:  # Google_Book_Ngram:
                  ngram1,
                  ngram2,
                  lang="Russian",
-                 y_beg=1919,
+                 y_beg=1800,
                  y_end=2019,
                  caseins=False,
                  alpha=0.95):  # Инициализация класса
@@ -61,8 +61,8 @@ class GBN:  # Google_Book_Ngram:
             more_common = self.ngram1
             less_common = self.ngram2
         else:
-            more_common = ngram2
-            less_common = ngram1
+            more_common = self.ngram2
+            less_common = self.ngram1
 
         if self.cmpr.pvalue < self.alpha:
             significance = 'и разница статистически значима'
